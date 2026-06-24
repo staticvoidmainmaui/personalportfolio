@@ -1,0 +1,173 @@
+.ghactivity {
+	&__live-label {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 11px;
+		letter-spacing: 0.12em;
+		color: var(--black);
+		margin-bottom: 20px;
+	}
+
+	&__live-dot {
+		width: 8px;
+		height: 8px;
+		background: #22c55e;
+		border-radius: 50%;
+		animation: pulse 2s ease infinite;
+
+		@keyframes pulse {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0.4; }
+		}
+	}
+
+	&__card {
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		padding: 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	&__card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 16px;
+		border-bottom: var(--border-thin);
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	&__card-title {
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		color: var(--black);
+	}
+
+	&__sync {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 11px;
+		color: var(--gray-400);
+	}
+
+	&__sync-dot {
+		width: 7px;
+		height: 7px;
+		background: #22c55e;
+		border-radius: 50%;
+	}
+
+	// Heatmap grid container
+	&__heatmap {
+		overflow-x: auto;
+		padding-bottom: 8px;
+
+		// Scrollbar styling
+		&::-webkit-scrollbar { height: 6px; }
+		&::-webkit-scrollbar-track { background: var(--gray-100); }
+		&::-webkit-scrollbar-thumb { background: var(--black); }
+	}
+
+	&__loading {
+		font-size: 12px;
+		color: var(--gray-400);
+		padding: 20px 0;
+	}
+
+	// Rendered by JS: grid of week columns
+	.gh-grid {
+		display: flex;
+		gap: 3px;
+		min-width: max-content;
+	}
+
+	.gh-week {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	.gh-day {
+		width: 11px;
+		height: 11px;
+		background: var(--gray-100);
+		transition: background var(--transition);
+
+		&[data-level="1"] { background: #c7d2f8; }
+		&[data-level="2"] { background: #818cf8; }
+		&[data-level="3"] { background: var(--blue-light); }
+		&[data-level="4"] { background: var(--blue); }
+
+		&:hover {
+			outline: 2px solid var(--black);
+			cursor: default;
+		}
+	}
+
+	// Month labels row (rendered by JS above the grid)
+	.gh-months {
+		display: flex;
+		gap: 0;
+		margin-bottom: 4px;
+		min-width: max-content;
+	}
+
+	.gh-month-label {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--gray-400);
+	}
+
+	// Legend
+	.gh-legend {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		margin-top: 8px;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--gray-400);
+	}
+
+	.gh-legend-day {
+		width: 11px;
+		height: 11px;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 12px;
+		padding-top: 16px;
+		border-top: var(--border-thin);
+	}
+
+	&__total {
+		font-size: 12px;
+		color: var(--gray-400);
+
+		strong {
+			color: var(--black);
+		}
+	}
+
+	&__link {
+		font-size: 12px;
+		color: var(--blue);
+		text-decoration: none;
+		letter-spacing: 0.05em;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

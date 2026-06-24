@@ -1,0 +1,59 @@
+<section class="contact section" id="contact" data-anim-contact>
+	<div class="contact__container">
+
+		<div class="contact__header">
+			<div class="section-label">GET IN TOUCH</div>
+			<p class="contact__sub mono-note">// alejmaud@gmail.com</p>
+		</div>
+
+		<div class="contact__body">
+
+			<div class="contact__info">
+				<p class="contact__info-text">Have a project that needs a security-minded full-stack engineer? Let's talk.</p>
+				<div class="contact__info-items">
+					<div class="contact__info-item">
+						<span class="contact__info-label mono-note">EMAIL</span>
+						<a href="mailto:alejmaud@gmail.com" class="contact__info-val">alejmaud@gmail.com</a>
+					</div>
+					<div class="contact__info-item">
+						<span class="contact__info-label mono-note">LOCATION</span>
+						<span class="contact__info-val">Gainesville, FL</span>
+					</div>
+					<div class="contact__info-item">
+						<span class="contact__info-label mono-note">GITHUB</span>
+						<a href="https://github.com/staticvoidmainmaui" class="contact__info-val" target="_blank" rel="noopener">@staticvoidmainmaui</a>
+					</div>
+				</div>
+			</div>
+
+			<form class="contact__form" data-contact-form novalidate>
+
+				<div class="contact__field">
+					<label class="contact__label mono-note" for="contact-name">YOUR NAME *</label>
+					<input class="contact__input" type="text" id="contact-name" name="name" placeholder="John Doe" required>
+				</div>
+
+				<div class="contact__field">
+					<label class="contact__label mono-note" for="contact-email">EMAIL *</label>
+					<input class="contact__input" type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+				</div>
+
+				<div class="contact__field">
+					<label class="contact__label mono-note" for="contact-msg">MESSAGE *</label>
+					<textarea class="contact__input contact__input--textarea" id="contact-msg" name="message" placeholder="Tell me about your project…" rows="5" required></textarea>
+				</div>
+
+				<button class="contact__submit" type="submit">
+					SEND MESSAGE →
+				</button>
+
+				<div class="contact__success mono-note" data-contact-success hidden>
+					// message sent! I'll get back to you soon.
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+</section>

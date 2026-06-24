@@ -1,0 +1,58 @@
+<header class="header" data-anim-header data-anim-header-scroll="1">
+
+	<!-- Scroll progress bar (fills as user scrolls) -->
+	<div class="header__progress" id="scroll-progress" aria-hidden="true"></div>
+
+	<div class="header__container">
+
+		<!-- Logo: black CDG-style heart -->
+		<a href="#hero" class="header__logo" aria-label="Home" data-anim-scrollto="#hero">
+			<svg class="header__heart" viewBox="0 0 64 58" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+				<!-- Heart body -->
+				<path d="M32 56C32 56 3 37.5 3 19C3 10.163 10.163 3 19 3C24.2 3 28.8 5.4 32 9.16C35.2 5.4 39.8 3 45 3C53.837 3 61 10.163 61 19C61 37.5 32 56 32 56Z" fill="var(--black)"/>
+				<!-- Left eye white -->
+				<ellipse cx="20" cy="23" rx="7.5" ry="5.5" fill="var(--white)"/>
+				<!-- Left iris blue -->
+				<ellipse cx="21" cy="24" rx="4.5" ry="3.5" fill="var(--blue)"/>
+				<!-- Right eye white -->
+				<ellipse cx="40" cy="23" rx="7.5" ry="5.5" fill="var(--white)"/>
+				<!-- Right iris blue -->
+				<ellipse cx="39" cy="24" rx="4.5" ry="3.5" fill="var(--blue)"/>
+			</svg>
+			<span class="header__logo-text">AMDL</span>
+		</a>
+
+		<!-- Nav -->
+		<nav class="header__nav" aria-label="Main navigation">
+			<ul class="header__nav-list">
+				<li><a href="#about" class="header__nav-link" data-anim-scrollto="#about">ABOUT</a></li>
+				<li><a href="#education" class="header__nav-link" data-anim-scrollto="#education">EDUCATION</a></li>
+				<li><a href="#experience" class="header__nav-link" data-anim-scrollto="#experience">EXPERIENCE</a></li>
+				<li><a href="#projects" class="header__nav-link" data-anim-scrollto="#projects">PROJECTS</a></li>
+				<li><a href="#skills" class="header__nav-link" data-anim-scrollto="#skills">SKILLS</a></li>
+				<li><a href="#contact" class="header__nav-link header__nav-link--cta" data-anim-scrollto="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+
+		<!-- Mobile hamburger -->
+		<button class="header__burger" aria-label="Open menu" aria-expanded="false" data-header-burger>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+	</div>
+
+	<!-- Mobile nav drawer -->
+	<nav class="header__mobile-nav" aria-label="Mobile navigation" data-header-mobile-nav>
+		<ul class="header__mobile-list">
+			<li><a href="#about" data-anim-scrollto="#about">ABOUT</a></li>
+			<li><a href="#education" data-anim-scrollto="#education">EDUCATION</a></li>
+			<li><a href="#experience" data-anim-scrollto="#experience">EXPERIENCE</a></li>
+			<li><a href="#projects" data-anim-scrollto="#projects">PROJECTS</a></li>
+			<li><a href="#skills" data-anim-scrollto="#skills">SKILLS</a></li>
+			<li><a href="#contact" data-anim-scrollto="#contact">CONTACT</a></li>
+		</ul>
+	</nav>
+
+</header>

@@ -1,0 +1,86 @@
+.skills {
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+
+		@media (max-width: toEm($tablet)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: toEm($mobile)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__card {
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		transition: transform var(--transition), box-shadow var(--transition);
+
+		&:hover {
+			transform: translate(-3px, -3px);
+			box-shadow: 9px 9px 0 var(--black);
+		}
+
+		// Blue accent border on top
+		&--blue {
+			border-top: 4px solid var(--blue);
+		}
+
+		// Dark card (Security — distinctive)
+		&--dark {
+			background: var(--black);
+			border-color: var(--black);
+			box-shadow: var(--shadow-hard-blue);
+
+			.skills__card-icon,
+			.skills__card-title {
+				color: var(--white);
+			}
+
+			.tag {
+				background: transparent;
+				border-color: rgba(255, 255, 255, 0.3);
+				color: var(--white);
+			}
+
+			&:hover {
+				box-shadow: 9px 9px 0 var(--blue);
+			}
+		}
+	}
+
+	&__card-header {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding-bottom: 14px;
+		border-bottom: var(--border-thin);
+	}
+
+	&__card-icon {
+		font-size: 18px;
+		color: var(--blue);
+		line-height: 1;
+	}
+
+	&__card-title {
+		font-family: var(--font-mono);
+		font-size: 13px;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		margin: 0;
+		color: var(--black);
+	}
+
+	&__chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+	}
+}

@@ -1,0 +1,151 @@
+.journey {
+	&__layout {
+		display: grid;
+		grid-template-columns: 1fr 340px;
+		gap: 48px;
+		align-items: start;
+
+		@media (max-width: toEm($tablet)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__timeline {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		// Vertical line
+		&::before {
+			content: '';
+			position: absolute;
+			left: 7px;
+			top: 12px;
+			bottom: 0;
+			width: 3px;
+			background: var(--black);
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 28px 1fr;
+		gap: 20px;
+		padding-bottom: 48px;
+		position: relative;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	&__dot {
+		width: 17px;
+		height: 17px;
+		border: 3px solid var(--black);
+		background: var(--blue);
+		border-radius: 0; // Square dot (neo-brutalist)
+		margin-top: 3px;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__content {
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		padding: 20px 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		transition: transform var(--transition), box-shadow var(--transition);
+
+		&:hover {
+			transform: translate(-3px, -3px);
+			box-shadow: 9px 9px 0 var(--black);
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 12px;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		font-family: var(--font-heading);
+		font-size: 17px;
+		font-weight: 700;
+		margin: 0;
+		color: var(--black);
+	}
+
+	&__period {
+		font-size: 12px;
+		color: var(--blue);
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+
+	&__company {
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--gray-600);
+		margin: 0;
+	}
+
+	&__bullets {
+		margin: 0;
+		padding-left: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		li {
+			font-size: 14px;
+			line-height: 1.6;
+			color: var(--gray-600);
+		}
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+
+	&__location {
+		margin: 0;
+		font-size: 12px;
+		color: var(--gray-400);
+	}
+
+	// Map panel (future home of Google Maps)
+	&__map-panel {
+		position: sticky;
+		top: 84px; // header height + gap
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		min-height: 320px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (max-width: toEm($tablet)) {
+			display: none;
+		}
+	}
+
+	&__map-placeholder {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		color: var(--gray-400);
+		font-size: 12px;
+		text-align: center;
+	}
+}

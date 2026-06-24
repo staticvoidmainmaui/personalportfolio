@@ -1,0 +1,151 @@
+<section class="projects section" id="projects" data-anim-projects>
+	<div class="projects__container">
+
+		<h2 class="projects__heading">Projects.</h2>
+
+		<!-- Filter tabs -->
+		<div class="projects__filters" role="tablist" aria-label="Filter projects by category">
+			<button class="projects__filter --active" data-filter="all" role="tab" aria-selected="true">
+				ALL <span class="projects__filter-count" data-count-all></span>
+			</button>
+			<button class="projects__filter" data-filter="AI" role="tab" aria-selected="false">
+				AI <span class="projects__filter-count" data-count-ai></span>
+			</button>
+			<button class="projects__filter" data-filter="Web" role="tab" aria-selected="false">
+				WEB <span class="projects__filter-count" data-count-web></span>
+			</button>
+			<button class="projects__filter" data-filter="Security" role="tab" aria-selected="false">
+				SECURITY <span class="projects__filter-count" data-count-security></span>
+			</button>
+			<button class="projects__filter" data-filter="Cloud" role="tab" aria-selected="false">
+				CLOUD <span class="projects__filter-count" data-count-cloud></span>
+			</button>
+			<span class="projects__shown mono-note" data-projects-shown></span>
+		</div>
+
+		<!-- Card grid -->
+		<div class="projects__grid" data-projects-grid>
+
+			<article class="projects__card" data-project-categories="AI,Web,Cloud" data-project-source="https://github.com/staticvoidmainmaui" data-project-demo="#">
+				<div class="projects__card-inner">
+					<div class="projects__card-tags">
+						<span class="tag">AI</span>
+						<span class="tag">WEB</span>
+						<span class="tag">CLOUD</span>
+					</div>
+					<h3 class="projects__card-title">GoGators</h3>
+					<p class="projects__card-summary">Personal AI Planner PWA with multi-turn NLP, DynamoDB session persistence, and a tiered inference pipeline — cutting Claude API costs by 60%. Full CI/CD via GitHub Actions.</p>
+					<div class="projects__card-tech">
+						<span class="tag">React</span>
+						<span class="tag">Node.js</span>
+						<span class="tag">AWS</span>
+						<span class="tag">Claude API</span>
+						<span class="tag">Docker</span>
+					</div>
+					<div class="projects__card-hover projects__card-hover--top">
+						<a href="https://github.com/staticvoidmainmaui" class="projects__card-action" target="_blank" rel="noopener">↗ SOURCE CODE</a>
+					</div>
+					<div class="projects__card-hover projects__card-hover--bottom">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ LIVE DEMO</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="projects__card" data-project-categories="AI,Security,Web" data-project-source="https://github.com/staticvoidmainmaui" data-project-demo="#">
+				<div class="projects__card-inner">
+					<div class="projects__card-tags">
+						<span class="tag">AI</span>
+						<span class="tag">SECURITY</span>
+						<span class="tag">WEB</span>
+					</div>
+					<h3 class="projects__card-title">Baptize</h3>
+					<p class="projects__card-summary">AI Security Gateway with a 4-stage inspection pipeline for securing LLM API requests in real time. Prompt injection detection at sub-5ms latency. HMAC-SHA256 key hashing with full audit logging.</p>
+					<div class="projects__card-tech">
+						<span class="tag">React</span>
+						<span class="tag">TypeScript</span>
+						<span class="tag">Zustand</span>
+						<span class="tag">HMAC-SHA256</span>
+					</div>
+					<div class="projects__card-hover projects__card-hover--top">
+						<a href="https://github.com/staticvoidmainmaui" class="projects__card-action" target="_blank" rel="noopener">↗ SOURCE CODE</a>
+					</div>
+					<div class="projects__card-hover projects__card-hover--bottom">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ LIVE DEMO</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="projects__card" data-project-categories="Web" data-project-source="#" data-project-demo="#">
+				<div class="projects__card-inner">
+					<div class="projects__card-tags">
+						<span class="tag">WEB</span>
+					</div>
+					<h3 class="projects__card-title">MASA Website</h3>
+					<p class="projects__card-summary">Production website for the Mexican American Student Association at UF. Built with Astro, TypeScript, and Tailwind CSS deployed on Cloudflare Workers. Includes a Telegram bot for a 200+ participant game.</p>
+					<div class="projects__card-tech">
+						<span class="tag">Astro</span>
+						<span class="tag">TypeScript</span>
+						<span class="tag">Tailwind</span>
+						<span class="tag">Cloudflare</span>
+					</div>
+					<div class="projects__card-hover projects__card-hover--top">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ SOURCE CODE</a>
+					</div>
+					<div class="projects__card-hover projects__card-hover--bottom">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ LIVE DEMO</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="projects__card" data-project-categories="AI" data-project-source="#" data-project-demo="#" data-project-wip>
+				<div class="projects__card-inner">
+					<div class="projects__card-wip mono-note">// WORK IN PROGRESS</div>
+					<div class="projects__card-tags">
+						<span class="tag">AI</span>
+					</div>
+					<h3 class="projects__card-title">BCI Drone Control</h3>
+					<p class="projects__card-summary">Real-time brain-computer interface control for RYZE Tello drones using EMOTIV EEG headsets. Custom Unity UDP pipeline cutting BCI signal latency from 10–30ms to 1–5ms. ML pipelines for EEG noise filtering.</p>
+					<div class="projects__card-tech">
+						<span class="tag">Unity</span>
+						<span class="tag">C#</span>
+						<span class="tag">Python</span>
+						<span class="tag">UDP</span>
+						<span class="tag">EEG</span>
+					</div>
+					<div class="projects__card-hover projects__card-hover--top">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ SOURCE CODE</a>
+					</div>
+					<div class="projects__card-hover projects__card-hover--bottom">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ LIVE DEMO</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="projects__card" data-project-categories="Security,Cloud" data-project-source="#" data-project-demo="#">
+				<div class="projects__card-inner">
+					<div class="projects__card-tags">
+						<span class="tag">SECURITY</span>
+						<span class="tag">CLOUD</span>
+					</div>
+					<h3 class="projects__card-title">Secure IoT Dashboard</h3>
+					<p class="projects__card-summary">Real-time security monitor for MQTT-based IoT water monitoring systems. TLS-encrypted device communication with HMAC replay-attack protection and live pipeline health visualization via Streamlit.</p>
+					<div class="projects__card-tech">
+						<span class="tag">Python</span>
+						<span class="tag">Streamlit</span>
+						<span class="tag">Docker</span>
+						<span class="tag">MQTT</span>
+						<span class="tag">TLS</span>
+					</div>
+					<div class="projects__card-hover projects__card-hover--top">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ SOURCE CODE</a>
+					</div>
+					<div class="projects__card-hover projects__card-hover--bottom">
+						<a href="#" class="projects__card-action" target="_blank" rel="noopener">↗ LIVE DEMO</a>
+					</div>
+				</div>
+			</article>
+
+		</div>
+
+	</div>
+</section>

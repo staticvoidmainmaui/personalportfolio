@@ -1,0 +1,199 @@
+.about {
+	&__heading {
+		font-size: clamp(40px, 6vw, 80px);
+		margin: 0 0 56px;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: 340px 1fr;
+		gap: 48px;
+
+		@media (max-width: toEm($tablet)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	// Info card (Vara style: label + value table)
+	&__info-card {
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		padding: 20px 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	&__info-row {
+		display: flex;
+		align-items: baseline;
+		gap: 12px;
+		padding: 10px 0;
+		border-bottom: var(--border-thin);
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__info-key {
+		font-size: 11px;
+		color: var(--gray-400);
+		min-width: 72px;
+		flex-shrink: 0;
+	}
+
+	&__info-val {
+		font-family: var(--font-heading);
+		font-size: 12px;
+		font-weight: 700;
+		color: var(--black);
+		letter-spacing: 0.05em;
+	}
+
+	&__info-link {
+		font-family: var(--font-mono);
+		font-size: 12px;
+		font-weight: 500;
+		color: var(--blue);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+
+		&:hover {
+			color: var(--blue-deep);
+		}
+	}
+
+	// Stat counters (Vara 3-column row)
+	&__stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+	}
+
+	&__stat {
+		padding: 20px 16px;
+		background: var(--white);
+		border-right: var(--border);
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	&__stat-num {
+		font-family: var(--font-heading);
+		font-size: 28px;
+		font-weight: 700;
+		color: var(--black);
+		line-height: 1;
+	}
+
+	&__stat-label {
+		font-size: 9px;
+		color: var(--gray-400);
+		letter-spacing: 0.08em;
+	}
+
+	// Right column
+	&__right {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+	}
+
+	&__blurb {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		p {
+			margin: 0;
+			font-size: 16px;
+			line-height: 1.7;
+			color: var(--gray-600);
+
+			em {
+				font-style: normal;
+				color: var(--black);
+				font-weight: 600;
+			}
+		}
+	}
+
+	// Core workflow principles box (Vara style)
+	&__principles {
+		border: var(--border);
+		box-shadow: var(--shadow-hard);
+		background: var(--white);
+		overflow: hidden;
+	}
+
+	&__principles-header {
+		padding: 12px 20px;
+		background: var(--black);
+		color: var(--white);
+		font-size: 11px;
+		letter-spacing: 0.1em;
+		border-bottom: var(--border);
+	}
+
+	&__principles-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0;
+
+		@media (max-width: toEm($mobileSmall)) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__principle {
+		padding: 20px;
+		border-right: var(--border-thin);
+		border-bottom: var(--border-thin);
+
+		&:nth-child(2n) { border-right: none; }
+		&:nth-last-child(-n+2) { border-bottom: none; }
+
+		@media (max-width: toEm($mobileSmall)) {
+			border-right: none;
+			&:last-child { border-bottom: none; }
+		}
+	}
+
+	&__principle-icon {
+		display: block;
+		font-size: 14px;
+		color: var(--blue);
+		margin-bottom: 8px;
+	}
+
+	&__principle-title {
+		font-family: var(--font-mono);
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		margin: 0 0 6px;
+		color: var(--black);
+	}
+
+	&__principle-body {
+		font-size: 13px;
+		line-height: 1.6;
+		color: var(--blue);
+		margin: 0;
+	}
+}

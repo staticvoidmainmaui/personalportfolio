@@ -1,0 +1,33 @@
+:root {
+	/* Brand palette */
+	--blue: #1f24c4;
+	--blue-deep: #161ab0;
+	--blue-light: #3a40d4;
+	--black: #0a0a0a;
+	--white: #ffffff;
+	--paper: #f4f4f2;
+	--gray-100: #e8e8e6;
+	--gray-400: #9a9a98;
+	--gray-600: #5a5a58;
+
+	/* Neo-brutalist primitives */
+	--border: 3px solid var(--black);
+	--border-thin: 1.5px solid var(--black);
+	--shadow-hard: 6px 6px 0 var(--black);
+	--shadow-hard-sm: 4px 4px 0 var(--black);
+	--shadow-hard-blue: 6px 6px 0 var(--blue);
+	--shadow-hard-blue-sm: 4px 4px 0 var(--blue);
+
+	/* Typography */
+	--font-heading: "Space Grotesk", sans-serif;
+	--font-body: "Inter", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
+
+	/* Spacing */
+	--section-gap: 100px;
+	--section-gap-sm: 60px;
+
+	/* Transitions */
+	--transition: 0.2s ease;
+	--transition-slow: 0.4s ease;
+}

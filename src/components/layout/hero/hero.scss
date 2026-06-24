@@ -1,0 +1,285 @@
+.hero {
+	min-height: calc(100vh - 64px);
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+
+	&__container {
+		position: relative;
+		width: 100%;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	// Code annotations (Vara style)
+	&__annotation {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		font-size: 12px;
+		line-height: 1.7;
+
+		&--tl {
+			top: 0;
+			left: 15px;
+		}
+
+		&--br {
+			bottom: 0;
+			right: 15px;
+			text-align: right;
+
+			em {
+				font-style: normal;
+				color: var(--blue);
+			}
+		}
+
+		&--bl {
+			bottom: 0;
+			left: 15px;
+		}
+
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+	}
+
+	// Line numbers (right edge, Vara)
+	&__linenums {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		font-size: 11px;
+		color: var(--gray-100);
+		text-align: right;
+
+		@media (max-width: toEm($mobile)) {
+			display: none;
+		}
+	}
+
+	// Main content: centered column
+	&__content {
+		max-width: 760px;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	// Oversized name (Vara style)
+	&__name {
+		display: flex;
+		flex-direction: column;
+		font-family: var(--font-heading);
+		font-weight: 700;
+		line-height: 0.95;
+		margin: 0;
+		overflow: hidden; // for split-type reveal
+
+		@include adaptiveValue("font-size", 110, 48);
+	}
+
+	&__name-first {
+		display: block;
+		color: var(--black);
+	}
+
+	&__name-last {
+		display: block;
+		color: var(--gray-400); // Vara: last name/period in muted gray
+	}
+
+	&__name-dot {
+		color: var(--blue);
+	}
+
+	// Role line (typed/mono style)
+	&__role {
+		font-size: 16px;
+		margin: 0;
+		color: var(--gray-600);
+	}
+
+	// Tech chips row
+	&__chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	// Social buttons row
+	&__socials {
+		display: flex;
+		gap: 8px;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		border: var(--border);
+		color: var(--black);
+		background: transparent;
+		transition: background var(--transition), color var(--transition),
+			box-shadow var(--transition), transform var(--transition);
+
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+
+		&:hover {
+			background: var(--black);
+			color: var(--white);
+			box-shadow: var(--shadow-hard-blue);
+			transform: translate(-3px, -3px);
+		}
+	}
+
+	// Squinting CDG-style eyes (right side, desktop only)
+	&__eyes {
+		position: absolute;
+		right: 80px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 180px;
+		pointer-events: none;
+
+		@media (max-width: 1100px) {
+			display: none;
+		}
+	}
+
+	// Blue decorative dividers (between hero content and next section)
+	&__dividers {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 48px;
+
+		div {
+			height: 3px;
+			background: var(--blue);
+		}
+	}
+
+	// CTA buttons
+	&__actions {
+		display: flex;
+		gap: 12px;
+		flex-wrap: wrap;
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 14px 28px;
+		font-family: var(--font-mono);
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		cursor: pointer;
+		border: var(--border);
+		transition: transform var(--transition), box-shadow var(--transition),
+			background var(--transition), color var(--transition);
+		text-decoration: none;
+
+		&--primary {
+			background: var(--black);
+			color: var(--white);
+			box-shadow: var(--shadow-hard-blue);
+
+			&:hover {
+				transform: translate(-3px, -3px);
+				box-shadow: 9px 9px 0 var(--blue);
+			}
+		}
+
+		&--secondary {
+			background: transparent;
+			color: var(--black);
+			box-shadow: var(--shadow-hard);
+
+			&:hover {
+				background: var(--black);
+				color: var(--white);
+				transform: translate(-3px, -3px);
+				box-shadow: 9px 9px 0 var(--black);
+			}
+		}
+	}
+}
+
+// Resume popup
+.popup {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	background: rgba(10, 10, 10, 0.75);
+	align-items: center;
+	justify-content: center;
+
+	&.--active {
+		display: flex;
+	}
+
+	&__wrapper {
+		width: 90vw;
+		max-width: 860px;
+		height: 90vh;
+		position: relative;
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+		background: var(--paper);
+		border: var(--border);
+		box-shadow: var(--shadow-hard-blue);
+		position: relative;
+		overflow: hidden;
+
+		&--resume {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		z-index: 2;
+		width: 36px;
+		height: 36px;
+		background: var(--paper);
+		border: var(--border);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background var(--transition), color var(--transition);
+
+		&:hover {
+			background: var(--black);
+			color: var(--white);
+		}
+	}
+
+	&__pdf {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+}

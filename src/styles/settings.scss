@@ -1,0 +1,44 @@
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Default style settings
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+$fontFamily: "Inter"; // Body font
+$fontFamilyHeading: "Space Grotesk"; // Heading font
+$fontFamilyMono: "JetBrains Mono"; // Mono/accent font
+$fontSize: 16; // Default font size (where 16 is the default font size from the design)
+
+// Main colors
+$mainColor: #0a0a0a; // Default font color
+$blue: #1f24c4;
+$black: #0a0a0a;
+$paper: #f4f4f2;
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Responsive grid settings
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Minimum page width
+$minWidth: 320;
+// Canvas (layout) width
+$maxWidth: 1920;
+// Max width of the container (0 = no limit)
+$maxWidthContainer: 1170;
+// Total horizontal padding inside the container
+// (30 = 15px left + 15px right, 0 = no padding)
+$containerPadding: 30;
+
+// The width at which the first breakpoint triggers
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$pc: $containerWidth; // PC, laptops, some tablets in landscape
+$tablet: 991.98; // Tablets, some phones in landscape
+$mobile: 767.98; // Phones L
+$mobileSmall: 479.98; // Phones S
+
+// Responsive mode type:
+// 1 = fluid (container has no breakpoints),
+// 2 = breakpoint-based (container changes its width at breakpoints)
+$responsiveType: 1;
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
