@@ -38,3 +38,13 @@ desktop.ini
 *.log
 *.tmp
 *.temp
+
+# Reference/working images not meant for the published site
+reference_images/
+
+#docs
+mydocs/
+
+#manuscript files
+src/components/pages/manuscript/
+scr/manuscript.html

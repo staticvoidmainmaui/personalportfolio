@@ -22,6 +22,9 @@
 		"wpstop": "node template_modules/wordpress/terminal.js down"
 	},
 	"devDependencies": {
+		"@tiptap/core": "latest",
+		"@tiptap/starter-kit": "latest",
+		"tiptap-markdown": "latest",
 		"@davestewart/outliner": "latest",
 		"@googlemaps/js-api-loader": "latest",
 		"@spiriit/vite-plugin-svg-spritemap": "latest",
